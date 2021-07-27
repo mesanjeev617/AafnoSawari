@@ -1,0 +1,366 @@
+﻿@model DTO.CarDTO
+<div class="box-body">
+    <input type="number" value="@Model.ID" name="ID" hidden />
+    <div class="form-group">
+        <label>Vechile Identification Number</label>
+        @Html.TextBoxFor(x => x.VIN, new { @class = "form-control", @Placeholder = "VIN number" })
+        @Html.ValidationMessageFor(x => x.VIN)
+    </div>
+
+    <div class="form-group">
+        <label>Make</label>
+        @Html.TextBoxFor(x => x.Make, new { @class = "form-control", @Placeholder = "Make" })
+        @Html.ValidationMessageFor(x => x.Make)
+    </div>
+
+    <div class="form-group">
+        <label>Model</label>
+        @Html.TextBoxFor(x => x.Model, new { @class = "form-control", @Placeholder = "Model" })
+        @Html.ValidationMessageFor(x => x.Model)
+    </div>
+
+    <div class="form-group">
+        <label>Body</label>
+        @Html.TextBoxFor(x => x.Body, new { @class = "form-control", @Placeholder = "Body" })
+        @Html.ValidationMessageFor(x => x.Body)
+    </div>
+
+    <div class="form-group">
+        <label>Year</label>
+        @Html.TextBoxFor(x => x.Year, new { @class = "form-control", @Placeholder = "Year" })
+        @Html.ValidationMessageFor(x => x.Year)
+    </div>
+
+    <div class="form-group">
+        <label>Price</label>
+        @Html.TextBoxFor(x => x.Price, new { @class = "form-control", @Placeholder = "Price" })
+        @Html.ValidationMessageFor(x => x.Price)
+    </div>
+
+    <div class="form-group">
+        <label>Number Of Engine</label>
+        @Html.TextBoxFor(x => x.Engine, new { @class = "form-control", @Placeholder = "Number of Engine" })
+        @Html.ValidationMessageFor(x => x.Engine)
+    </div>
+
+    <div class="form-group">
+        <label>Engine Type</label>
+        @Html.TextBoxFor(x => x.EngineType, new { @class = "form-control", @Placeholder = "Engine Type" })
+        @Html.ValidationMessageFor(x => x.EngineType)
+    </div>
+
+    <div class="form-group">
+        <label>Transmission</label>
+        @Html.TextBoxFor(x => x.Transmission, new { @class = "form-control", @Placeholder = "Transmission" })
+        @Html.ValidationMessageFor(x => x.Transmission)
+    </div>
+
+    <div class="form-group">
+        <label>Fuel Type</label>
+        @Html.TextBoxFor(x => x.FuelType, new { @class = "form-control", @Placeholder = "Fuel Type" })
+        @Html.ValidationMessageFor(x => x.FuelType)
+    </div>
+
+    <div class="form-group">
+        <label>Fuel Capacity</label>
+        @Html.TextBoxFor(x => x.FuelCapacity, new { @class = "form-control", @Placeholder = "Fuel Capacity" })
+        @Html.ValidationMessageFor(x => x.FuelCapacity)
+    </div>
+
+    <div class="form-group">
+        <label>Auto Driving</label>
+        @Html.TextBoxFor(x => x.AutoDriving, new { @class = "form-control", @Placeholder = "Auto Driving" })
+        @Html.ValidationMessageFor(x => x.AutoDriving)
+    </div>
+
+    <div class="form-group">
+        <label>Auto Steering</label>
+        @Html.TextBoxFor(x => x.AutoSteering, new { @class = "form-control", @Placeholder = "Auto Steering" })
+        @Html.ValidationMessageFor(x => x.AutoSteering)
+    </div>
+
+    <div class="form-group">
+        <label>Max Seating</label>
+        @Html.TextBoxFor(x => x.MaxSeating, new { @class = "form-control", @Placeholder = "Max Seating" })
+        @Html.ValidationMessageFor(x => x.MaxSeating)
+    </div>
+
+    <div class="form-group">
+        <label>Drive Train</label>
+        @Html.TextBoxFor(x => x.DriveTrain, new { @class = "form-control", @Placeholder = "Drive Train" })
+        @Html.ValidationMessageFor(x => x.DriveTrain)
+    </div>
+
+    <div class="form-group">
+        <label>Doors</label>
+        @Html.TextBoxFor(x => x.Doors, new { @class = "form-control", @Placeholder = "Doors" })
+        @Html.ValidationMessageFor(x => x.Doors)
+    </div>
+
+    <div class="form-group">
+        <label>Fog Light</label>
+        @Html.TextBoxFor(x => x.FogLight, new { @class = "form-control", @Placeholder = "Fog Light" })
+        @Html.ValidationMessageFor(x => x.FogLight)
+    </div>
+
+    <div class="form-group">
+        <label>Sun Roof</label>
+        @Html.TextBoxFor(x => x.SunRoof, new { @class = "form-control", @Placeholder = "SunRoof" })
+        @Html.ValidationMessageFor(x => x.SunRoof)
+    </div>
+
+    <div class="form-group">
+        <label>Top Speed</label>
+        @Html.TextBoxFor(x => x.TopSpeed, new { @class = "form-control", @Placeholder = "Top Speed" })
+        @Html.ValidationMessageFor(x => x.TopSpeed)
+    </div>
+
+    <div class="form-group">
+        <label>Horse Power</label>
+        @Html.TextBoxFor(x => x.HorsePower, new { @class = "form-control", @Placeholder = "Horse Power" })
+        @Html.ValidationMessageFor(x => x.HorsePower)
+    </div>
+
+    <div class="form-group">
+        <label>Torque</label>
+        @Html.TextBoxFor(x => x.Torque, new { @class = "form-control", @Placeholder = "Torque" })
+        @Html.ValidationMessageFor(x => x.Torque)
+    </div>
+
+    <div class="form-group">
+        <label>Bluetooth</label>
+        @Html.TextBoxFor(x => x.Bluetooth, new { @class = "form-control", @Placeholder = "Bluetooth" })
+        @Html.ValidationMessageFor(x => x.Bluetooth)
+    </div>
+
+    <div class="form-group">
+        <label>Cruise</label>
+        @Html.TextBoxFor(x => x.Cruise, new { @class = "form-control", @Placeholder = "Cruise" })
+        @Html.ValidationMessageFor(x => x.Cruise)
+    </div>
+
+    <div class="form-group">
+        <label>Keys</label>
+        @Html.TextBoxFor(x => x.Keys, new { @class = "form-control", @Placeholder = "Keys" })
+        @Html.ValidationMessageFor(x => x.Keys)
+    </div>
+
+    <div class="form-group">
+        <label>Start Type</label>
+        @Html.TextBoxFor(x => x.StartType, new { @class = "form-control", @Placeholder = "Start type" })
+        @Html.ValidationMessageFor(x => x.StartType)
+    </div>
+
+    <div class="form-group">
+        <label>Touch Screen Monitor</label>
+        @Html.TextBoxFor(x => x.TouchScreenMonitor, new { @class = "form-control", @Placeholder = "Touch Screen Monitor" })
+        @Html.ValidationMessageFor(x => x.TouchScreenMonitor)
+    </div>
+
+    <div class="form-group">
+        <label>USB Port</label>
+        @Html.TextBoxFor(x => x.USBPort, new { @class = "form-control", @Placeholder = "USB Port" })
+        @Html.ValidationMessageFor(x => x.USBPort)
+    </div>
+
+    <div class="form-group">
+        <label>Seats</label>
+        @Html.TextBoxFor(x => x.Seats, new { @class = "form-control", @Placeholder = "Seats" })
+        @Html.ValidationMessageFor(x => x.Seats)
+    </div>
+
+    <div class="form-group">
+        <label>Power Drive Seats</label>
+        @Html.TextBoxFor(x => x.PowerDriveSeats, new { @class = "form-control", @Placeholder = "Power Drive Seats" })
+        @Html.ValidationMessageFor(x => x.PowerDriveSeats)
+    </div>
+
+    <div class="form-group">
+        <label>Security</label>
+        @Html.TextBoxFor(x => x.Security, new { @class = "form-control", @Placeholder = "Security" })
+        @Html.ValidationMessageFor(x => x.Security)
+    </div>
+
+    <div class="form-group">
+        <label>Heated Seats</label>
+        @Html.TextBoxFor(x => x.HeatedSeat, new { @class = "form-control", @Placeholder = "Heated Seat" })
+        @Html.ValidationMessageFor(x => x.HeatedSeat)
+    </div>
+
+    <div class="form-group">
+        <label>Turbo</label>
+        @Html.TextBoxFor(x => x.Turbo, new { @class = "form-control", @Placeholder = "Turbo" })
+        @Html.ValidationMessageFor(x => x.Turbo)
+    </div>
+
+    <div class="form-group">
+        <label>Crash Test Rate</label>
+        @Html.TextBoxFor(x => x.CrashRating, new { @class = "form-control", @Placeholder = "Crash Rating" })
+        @Html.ValidationMessageFor(x => x.CrashRating)
+    </div>
+
+    <div class="form-group">
+        <label>Collision Detection</label>
+        @Html.TextBoxFor(x => x.CollisionDetection, new { @class = "form-control", @Placeholder = "Collision Detection" })
+        @Html.ValidationMessageFor(x => x.CollisionDetection)
+    </div>
+
+    <div class="form-group">
+        <label>Color</label>
+        @Html.TextBoxFor(x => x.Color, new { @class = "form-control", @Placeholder = "Color" })
+        @Html.ValidationMessageFor(x => x.Color)
+    </div>
+
+    <div class="form-group">
+        <label>Brake</label>
+        @Html.TextBoxFor(x => x.Brakes, new { @class = "form-control", @Placeholder = "Brakes" })
+        @Html.ValidationMessageFor(x => x.Brakes)
+    </div>
+
+    <div class="form-group">
+        <label>Length of Car</label>
+        @Html.TextBoxFor(x => x.Length, new { @class = "form-control", @Placeholder = "Length" })
+        @Html.ValidationMessageFor(x => x.Length)
+    </div>
+
+    <div class="form-group">
+        <label>Width Of the Car</label>
+        @Html.TextBoxFor(x => x.Width, new { @class = "form-control", @Placeholder = "Width" })
+        @Html.ValidationMessageFor(x => x.Width)
+    </div>
+
+    <div class="form-group">
+        <label>Height of the Car</label>
+        @Html.TextBoxFor(x => x.Height, new { @class = "form-control", @Placeholder = "Height" })
+        @Html.ValidationMessageFor(x => x.Height)
+    </div>
+
+    <div class="form-group">
+        <label>Cargo Capacity</label>
+        @Html.TextBoxFor(x => x.CargoCapacity, new { @class = "form-control", @Placeholder = "Cargo Capacity" })
+        @Html.ValidationMessageFor(x => x.CargoCapacity)
+    </div>
+
+    <div class="form-group">
+        <label>Weight</label>
+        @Html.TextBoxFor(x => x.Weight, new { @class = "form-control", @Placeholder = "Weight" })
+        @Html.ValidationMessageFor(x => x.Weight)
+    </div>
+
+    <div class="form-group">
+        <label>Mileage</label>
+        @Html.TextBoxFor(x => x.Mileage, new { @class = "form-control", @Placeholder = "Mileage" })
+        @Html.ValidationMessageFor(x => x.Mileage)
+    </div>
+
+    <div class="form-group">
+        <label>Engine Warranty</label>
+        @Html.TextBoxFor(x => x.EngineWarranty, new { @class = "form-control", @Placeholder = "Engine Warranty" })
+        @Html.ValidationMessageFor(x => x.EngineWarranty)
+    </div>
+
+    <div class="form-group">
+        <label>Transmisison Warranty</label>
+        @Html.TextBoxFor(x => x.TransmissionWarranty, new { @class = "form-control", @Placeholder = "Warranty On Transmission" })
+        @Html.ValidationMessageFor(x => x.TransmissionWarranty)
+    </div>
+
+    <div class="form-group">
+        <label>Suspension</label>
+        @Html.TextBoxFor(x => x.Suspension, new { @class = "form-control", @Placeholder = "Suspension" })
+        @Html.ValidationMessageFor(x => x.Suspension)
+    </div>
+
+    <div class="form-group">
+        <label>Number Of Airbags</label>
+        @Html.TextBoxFor(x => x.AirBags, new { @class = "form-control", @Placeholder = "AirBags Number" })
+        @Html.ValidationMessageFor(x => x.AirBags)
+    </div>
+
+    <div class="form-group">
+        <label>BackUp Camera</label>
+        @Html.TextBoxFor(x => x.BackupCamera, new { @class = "form-control", @Placeholder = "BackUp Camera" })
+        @Html.ValidationMessageFor(x => x.BackupCamera)
+    </div>
+
+    <div class="form-group">
+        <label>Is Lane Detection?</label>
+        @Html.TextBoxFor(x => x.LaneDetection, new { @class = "form-control", @Placeholder = "LaneDetection" })
+        @Html.ValidationMessageFor(x => x.LaneDetection)
+    </div>
+
+    <div class="form-group">
+        <label>Towing Capacity</label>
+        @Html.TextBoxFor(x => x.TowingCapacity, new { @class = "form-control", @Placeholder = "Towing Capacity" })
+        @Html.ValidationMessageFor(x => x.TowingCapacity)
+    </div>
+
+    <div class="form-group">
+        <label>Is It Imported?</label>
+        @Html.TextBoxFor(x => x.Import, new { @class = "form-control", @Placeholder = "Import" })
+        @Html.ValidationMessageFor(x => x.Import)
+    </div>
+
+    <div class="form-group">
+        <label>Country Of Origin ?</label>
+        @Html.TextBoxFor(x => x.CountryOfOrigin, new { @class = "form-control", @Placeholder = "Country Of Origin" })
+        @Html.ValidationMessageFor(x => x.CountryOfOrigin)
+    </div>
+
+    <div class="form-group">
+        <label>Tires</label>
+        @Html.TextBoxFor(x => x.Tires, new { @class = "form-control", @Placeholder = "Tires" })
+        @Html.ValidationMessageFor(x => x.Tires)
+    </div>
+
+    <div class="form-group">
+        <label>Rims</label>
+        @Html.TextBoxFor(x => x.Rims, new { @class = "form-control", @Placeholder = "RIms" })
+        @Html.ValidationMessageFor(x => x.Rims)
+    </div>
+
+
+
+    <div class="form-group">
+        <label>Car Image</label>
+        <br />
+        <input type="file" name="CarImage" accept="image/gif,image/jpg, image/jpeg, image/png"
+               multiple onchange="$('#CarImage')[0].src=window.URL.createObjectURL(this.files[0])" />
+        <br />
+        <img id="CarImage" width="300" height="200" />
+    </div>
+
+
+    <div class="form-group">
+        <label>Tags</label>
+        @Html.TextBoxFor(x => x.TagText, new { @class = "form-control", @placeholder = "Please Use ',' for separate Tags" })
+
+    </div>
+
+    <div class="form-check">
+        <input type="checkbox" class="form-check-inline" name="Slider" checked="@Model.Slider" value="true" />
+        <label class="form-check-label">Slider</label>
+    </div>
+
+    <div class="form-check">
+        <input type="checkbox" class="form-check-inline" name="Area1" checked="@Model.Area1" value="true" />
+        <label class="form-check-label">Area1</label>
+    </div>
+
+    <div class="form-check">
+        <input type="checkbox" class="form-check-inline" name="Area2" checked="@Model.Area2" value="true" />
+        <label class="form-check-label">Area2</label>
+    </div>
+
+    <div class="form-check">
+        <input type="checkbox" class="form-check-inline" name="Area 3" checked="@Model.Area3" value="true" />
+        <label class="form-check-label">Area3</label>
+    </div>
+
+    <div class="card-footer">
+        <button class="btn btn-primary" type="submit">Save</button>
+    </div>
+
+
+</div>
+

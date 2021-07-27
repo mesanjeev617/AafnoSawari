@@ -1,0 +1,1275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AafnoSawariModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ADDRESS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Address" Type="varchar(max)" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Phone" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Fax" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MapPathLarge" Type="varchar(max)" Nullable="false" />
+          <Property Name="MapPathSmall" Type="varchar(max)" Nullable="false" />
+          <Property Name="AddDate" Type="datetime" Nullable="false" />
+          <Property Name="isDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeletedDate" Type="datetime" />
+          <Property Name="LastUpdateUserID" Type="int" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ADVERTISEMENT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ImagePath" Type="varchar(max)" Nullable="false" />
+          <Property Name="Link" Type="varchar(max)" Nullable="false" />
+          <Property Name="Size" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="AddDate" Type="datetime" Nullable="false" />
+          <Property Name="isDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeletedDate" Type="datetime" />
+          <Property Name="LastUpdateUserID" Type="int" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CARIMAGES">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CarID" Type="int" Nullable="false" />
+          <Property Name="ImagePath" Type="varchar(max)" Nullable="false" />
+          <Property Name="ImagePath1" Type="varchar(max)" Nullable="false" />
+          <Property Name="ImagePath2" Type="varchar(max)" Nullable="false" />
+          <Property Name="ImagePath3" Type="varchar(max)" Nullable="false" />
+          <Property Name="ImagePath4" Type="varchar(max)" Nullable="false" />
+          <Property Name="ImagePath5" Type="varchar(max)" Nullable="false" />
+          <Property Name="ImagePath6" Type="varchar(max)" Nullable="false" />
+          <Property Name="ImagePath7" Type="varchar(max)" Nullable="false" />
+          <Property Name="ImagePath8" Type="varchar(max)" Nullable="false" />
+          <Property Name="ImagePath9" Type="varchar(max)" Nullable="false" />
+          <Property Name="AddDate" Type="datetime" Nullable="false" />
+          <Property Name="isDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeletedDate" Type="datetime" />
+          <Property Name="LastUpdateUserID" Type="int" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CARS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VIN" Type="varchar(max)" Nullable="false" />
+          <Property Name="Make" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Model" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Body" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Year" Type="int" Nullable="false" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Engine" Type="int" Nullable="false" />
+          <Property Name="EngineType" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Transmission" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FuelType" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FuelCapacity" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="AutoDriving" Type="bit" Nullable="false" />
+          <Property Name="AutoSteering" Type="bit" Nullable="false" />
+          <Property Name="MaxSeating" Type="int" Nullable="false" />
+          <Property Name="DriveTrain" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Doors" Type="int" Nullable="false" />
+          <Property Name="FogLight" Type="bit" Nullable="false" />
+          <Property Name="SunRoof" Type="bit" Nullable="false" />
+          <Property Name="TopSpeed" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="HorsePower" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Torque" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Bluetooth" Type="bit" Nullable="false" />
+          <Property Name="Cruise" Type="bit" Nullable="false" />
+          <Property Name="Keys" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="StartType" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TouchScreenMonitor" Type="bit" Nullable="false" />
+          <Property Name="USBPort" Type="bit" Nullable="false" />
+          <Property Name="Seats" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PowerDriveSeats" Type="bit" Nullable="false" />
+          <Property Name="Security" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="HeatedSeat" Type="bit" Nullable="false" />
+          <Property Name="Turbo" Type="bit" Nullable="false" />
+          <Property Name="CrashTestRating" Type="int" Nullable="false" />
+          <Property Name="ColiisionDetection" Type="bit" Nullable="false" />
+          <Property Name="Color" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Brakes" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="length" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="width" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="height" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="CargoCapacity" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Weigth" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Mileage" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="EngineWarranty" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TransmissionWarranty" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Suspension" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="AirBags" Type="int" Nullable="false" />
+          <Property Name="BackupCamera" Type="bit" Nullable="false" />
+          <Property Name="LaneDetection" Type="bit" Nullable="false" />
+          <Property Name="TowingCapacity" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Import" Type="bit" Nullable="false" />
+          <Property Name="CountryOfOrigin" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tires" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Rims" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ExtraFeatures" Type="varchar(max)" Nullable="false" />
+          <Property Name="SeoLink" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="AddDate" Type="datetime" Nullable="false" />
+          <Property Name="AddUserID" Type="int" Nullable="false" />
+          <Property Name="isDeleted" Type="bit" />
+          <Property Name="DeletedDate" Type="datetime" />
+          <Property Name="LastUpdateUserID" Type="int" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+          <Property Name="Slider" Type="bit" Nullable="false" />
+          <Property Name="Area1" Type="bit" Nullable="false" />
+          <Property Name="Area2" Type="bit" Nullable="false" />
+          <Property Name="Area3" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CARTAG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CarID" Type="int" Nullable="false" />
+          <Property Name="TagContent" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="AddDate" Type="datetime" Nullable="false" />
+          <Property Name="isDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeletedDate" Type="datetime" />
+          <Property Name="LastUpdateUserID" Type="int" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LOGTABLE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="IPAddress" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="ProcessID" Type="int" Nullable="false" />
+          <Property Name="ProcessType" Type="int" Nullable="false" />
+          <Property Name="ProcessCategoryType" Type="varchar" MaxLength="50" />
+          <Property Name="ProcessDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MESSAGES">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Phone" Type="varchar" MaxLength="20" />
+          <Property Name="Subject" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="Message" Type="varchar(max)" Nullable="false" />
+          <Property Name="isRead" Type="bit" Nullable="false" />
+          <Property Name="ReadUserID" Type="int" />
+          <Property Name="isDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeletedDate" Type="datetime" />
+          <Property Name="LastUpdateUserID" Type="int" />
+          <Property Name="LastUpdateDate" Type="datetime" />
+          <Property Name="AddDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PROCESSTYPE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProcessName" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="REVIEWS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CarID" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Stars" Type="int" Nullable="false" />
+          <Property Name="ReviewPost" Type="varchar(max)" Nullable="false" />
+          <Property Name="isApproved" Type="bit" Nullable="false" />
+          <Property Name="ApproveUserID" Type="int" />
+          <Property Name="ApproveDate" Type="datetime" />
+          <Property Name="AddDate" Type="datetime" Nullable="false" />
+          <Property Name="isDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeletedDate" Type="datetime" />
+          <Property Name="LastUpdateUserID" Type="int" />
+          <Property Name="LastUpdateDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="USERS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="30" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ImagePath" Type="varchar(max)" Nullable="false" />
+          <Property Name="isAdmin" Type="bit" Nullable="false" />
+          <Property Name="isDeleted" Type="bit" />
+          <Property Name="DeletedDate" Type="datetime" />
+          <Property Name="AddDate" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdateUserID" Type="int" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VIDEOS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VideoPath" Type="varchar(max)" Nullable="false" />
+          <Property Name="Title" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="OriginalVideoPath" Type="varchar(max)" Nullable="false" />
+          <Property Name="AddDate" Type="datetime" Nullable="false" />
+          <Property Name="AddUserID" Type="int" Nullable="false" />
+          <Property Name="isDeleted" Type="bit" Nullable="false" />
+          <Property Name="DeletedDate" Type="datetime" />
+          <Property Name="LastUpdateUserID" Type="int" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_ADDRESS_USERS">
+          <End Role="USERS" Type="Self.USERS" Multiplicity="1" />
+          <End Role="ADDRESS" Type="Self.ADDRESS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ADDRESS">
+              <PropertyRef Name="LastUpdateUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ADVERTISEMENT_USERS">
+          <End Role="USERS" Type="Self.USERS" Multiplicity="1" />
+          <End Role="ADVERTISEMENT" Type="Self.ADVERTISEMENT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ADVERTISEMENT">
+              <PropertyRef Name="LastUpdateUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARIMAGES_CARS">
+          <End Role="CARS" Type="Self.CARS" Multiplicity="1" />
+          <End Role="CARIMAGES" Type="Self.CARIMAGES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CARS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CARIMAGES">
+              <PropertyRef Name="CarID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARIMAGES_USERS">
+          <End Role="USERS" Type="Self.USERS" Multiplicity="1" />
+          <End Role="CARIMAGES" Type="Self.CARIMAGES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CARIMAGES">
+              <PropertyRef Name="LastUpdateUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARS_USERS">
+          <End Role="USERS" Type="Self.USERS" Multiplicity="1" />
+          <End Role="CARS" Type="Self.CARS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CARS">
+              <PropertyRef Name="LastUpdateUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARS_USERS1">
+          <End Role="USERS" Type="Self.USERS" Multiplicity="1" />
+          <End Role="CARS" Type="Self.CARS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CARS">
+              <PropertyRef Name="LastUpdateUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARTAG_CARS">
+          <End Role="CARS" Type="Self.CARS" Multiplicity="1" />
+          <End Role="CARTAG" Type="Self.CARTAG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CARS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CARTAG">
+              <PropertyRef Name="CarID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARTAG_USERS">
+          <End Role="USERS" Type="Self.USERS" Multiplicity="1" />
+          <End Role="CARTAG" Type="Self.CARTAG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CARTAG">
+              <PropertyRef Name="LastUpdateUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LOGTABLE_PROCESSTYPE">
+          <End Role="PROCESSTYPE" Type="Self.PROCESSTYPE" Multiplicity="1" />
+          <End Role="LOGTABLE" Type="Self.LOGTABLE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PROCESSTYPE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="LOGTABLE">
+              <PropertyRef Name="ProcessType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LOGTABLE_USERS">
+          <End Role="USERS" Type="Self.USERS" Multiplicity="1" />
+          <End Role="LOGTABLE" Type="Self.LOGTABLE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="LOGTABLE">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MESSAGES_USERS">
+          <End Role="USERS" Type="Self.USERS" Multiplicity="0..1" />
+          <End Role="MESSAGES" Type="Self.MESSAGES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MESSAGES">
+              <PropertyRef Name="LastUpdateUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REVIEWS_CARS">
+          <End Role="CARS" Type="Self.CARS" Multiplicity="1" />
+          <End Role="REVIEWS" Type="Self.REVIEWS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CARS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="REVIEWS">
+              <PropertyRef Name="CarID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REVIEWS_USERS">
+          <End Role="USERS" Type="Self.USERS" Multiplicity="0..1" />
+          <End Role="REVIEWS" Type="Self.REVIEWS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="REVIEWS">
+              <PropertyRef Name="LastUpdateUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VIDEOS_USERS">
+          <End Role="USERS" Type="Self.USERS" Multiplicity="1" />
+          <End Role="VIDEOS" Type="Self.VIDEOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VIDEOS">
+              <PropertyRef Name="LastUpdateUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AafnoSawariModelStoreContainer">
+          <EntitySet Name="ADDRESS" EntityType="Self.ADDRESS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ADVERTISEMENT" EntityType="Self.ADVERTISEMENT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CARIMAGES" EntityType="Self.CARIMAGES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CARS" EntityType="Self.CARS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CARTAG" EntityType="Self.CARTAG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LOGTABLE" EntityType="Self.LOGTABLE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MESSAGES" EntityType="Self.MESSAGES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PROCESSTYPE" EntityType="Self.PROCESSTYPE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="REVIEWS" EntityType="Self.REVIEWS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USERS" EntityType="Self.USERS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VIDEOS" EntityType="Self.VIDEOS" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ADDRESS_USERS" Association="Self.FK_ADDRESS_USERS">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="ADDRESS" EntitySet="ADDRESS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ADVERTISEMENT_USERS" Association="Self.FK_ADVERTISEMENT_USERS">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="ADVERTISEMENT" EntitySet="ADVERTISEMENT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARIMAGES_CARS" Association="Self.FK_CARIMAGES_CARS">
+            <End Role="CARS" EntitySet="CARS" />
+            <End Role="CARIMAGES" EntitySet="CARIMAGES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARIMAGES_USERS" Association="Self.FK_CARIMAGES_USERS">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="CARIMAGES" EntitySet="CARIMAGES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARS_USERS" Association="Self.FK_CARS_USERS">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="CARS" EntitySet="CARS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARS_USERS1" Association="Self.FK_CARS_USERS1">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="CARS" EntitySet="CARS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARTAG_CARS" Association="Self.FK_CARTAG_CARS">
+            <End Role="CARS" EntitySet="CARS" />
+            <End Role="CARTAG" EntitySet="CARTAG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARTAG_USERS" Association="Self.FK_CARTAG_USERS">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="CARTAG" EntitySet="CARTAG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LOGTABLE_PROCESSTYPE" Association="Self.FK_LOGTABLE_PROCESSTYPE">
+            <End Role="PROCESSTYPE" EntitySet="PROCESSTYPE" />
+            <End Role="LOGTABLE" EntitySet="LOGTABLE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LOGTABLE_USERS" Association="Self.FK_LOGTABLE_USERS">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="LOGTABLE" EntitySet="LOGTABLE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MESSAGES_USERS" Association="Self.FK_MESSAGES_USERS">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="MESSAGES" EntitySet="MESSAGES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REVIEWS_CARS" Association="Self.FK_REVIEWS_CARS">
+            <End Role="CARS" EntitySet="CARS" />
+            <End Role="REVIEWS" EntitySet="REVIEWS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REVIEWS_USERS" Association="Self.FK_REVIEWS_USERS">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="REVIEWS" EntitySet="REVIEWS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VIDEOS_USERS" Association="Self.FK_VIDEOS_USERS">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="VIDEOS" EntitySet="VIDEOS" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AafnoSawariModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ADDRESS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Address1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MapPathLarge" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MapPathSmall" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AddDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="isDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdateUserID" Type="Int32" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="USER" Relationship="Self.FK_ADDRESS_USERS" FromRole="ADDRESS" ToRole="USERS" />
+        </EntityType>
+        <EntityType Name="ADVERTISEMENT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Size" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AddDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="isDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdateUserID" Type="Int32" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="USER" Relationship="Self.FK_ADVERTISEMENT_USERS" FromRole="ADVERTISEMENT" ToRole="USERS" />
+        </EntityType>
+        <EntityType Name="CARIMAGE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CarID" Type="Int32" Nullable="false" />
+          <Property Name="ImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ImagePath1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ImagePath2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ImagePath3" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ImagePath4" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ImagePath5" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ImagePath6" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ImagePath7" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ImagePath8" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ImagePath9" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AddDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="isDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdateUserID" Type="Int32" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="CAR" Relationship="Self.FK_CARIMAGES_CARS" FromRole="CARIMAGES" ToRole="CARS" />
+          <NavigationProperty Name="USER" Relationship="Self.FK_CARIMAGES_USERS" FromRole="CARIMAGES" ToRole="USERS" />
+        </EntityType>
+        <EntityType Name="CAR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VIN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Make" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Body" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Year" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Engine" Type="Int32" Nullable="false" />
+          <Property Name="EngineType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Transmission" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FuelType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FuelCapacity" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="AutoDriving" Type="Boolean" Nullable="false" />
+          <Property Name="AutoSteering" Type="Boolean" Nullable="false" />
+          <Property Name="MaxSeating" Type="Int32" Nullable="false" />
+          <Property Name="DriveTrain" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Doors" Type="Int32" Nullable="false" />
+          <Property Name="FogLight" Type="Boolean" Nullable="false" />
+          <Property Name="SunRoof" Type="Boolean" Nullable="false" />
+          <Property Name="TopSpeed" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="HorsePower" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Torque" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Bluetooth" Type="Boolean" Nullable="false" />
+          <Property Name="Cruise" Type="Boolean" Nullable="false" />
+          <Property Name="Keys" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="StartType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TouchScreenMonitor" Type="Boolean" Nullable="false" />
+          <Property Name="USBPort" Type="Boolean" Nullable="false" />
+          <Property Name="Seats" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PowerDriveSeats" Type="Boolean" Nullable="false" />
+          <Property Name="Security" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HeatedSeat" Type="Boolean" Nullable="false" />
+          <Property Name="Turbo" Type="Boolean" Nullable="false" />
+          <Property Name="CrashTestRating" Type="Int32" Nullable="false" />
+          <Property Name="ColiisionDetection" Type="Boolean" Nullable="false" />
+          <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Brakes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="length" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="width" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="height" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="CargoCapacity" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Weigth" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Mileage" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="EngineWarranty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TransmissionWarranty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Suspension" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AirBags" Type="Int32" Nullable="false" />
+          <Property Name="BackupCamera" Type="Boolean" Nullable="false" />
+          <Property Name="LaneDetection" Type="Boolean" Nullable="false" />
+          <Property Name="TowingCapacity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Import" Type="Boolean" Nullable="false" />
+          <Property Name="CountryOfOrigin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tires" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Rims" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ExtraFeatures" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SeoLink" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AddDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="AddUserID" Type="Int32" Nullable="false" />
+          <Property Name="isDeleted" Type="Boolean" />
+          <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdateUserID" Type="Int32" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Slider" Type="Boolean" Nullable="false" />
+          <Property Name="Area1" Type="Boolean" Nullable="false" />
+          <Property Name="Area2" Type="Boolean" Nullable="false" />
+          <Property Name="Area3" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="CARIMAGES" Relationship="Self.FK_CARIMAGES_CARS" FromRole="CARS" ToRole="CARIMAGES" />
+          <NavigationProperty Name="USER" Relationship="Self.FK_CARS_USERS" FromRole="CARS" ToRole="USERS" />
+          <NavigationProperty Name="USER1" Relationship="Self.FK_CARS_USERS1" FromRole="CARS" ToRole="USERS" />
+          <NavigationProperty Name="CARTAGs" Relationship="Self.FK_CARTAG_CARS" FromRole="CARS" ToRole="CARTAG" />
+          <NavigationProperty Name="REVIEWS" Relationship="Self.FK_REVIEWS_CARS" FromRole="CARS" ToRole="REVIEWS" />
+        </EntityType>
+        <EntityType Name="CARTAG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CarID" Type="Int32" Nullable="false" />
+          <Property Name="TagContent" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AddDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="isDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdateUserID" Type="Int32" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="CAR" Relationship="Self.FK_CARTAG_CARS" FromRole="CARTAG" ToRole="CARS" />
+          <NavigationProperty Name="USER" Relationship="Self.FK_CARTAG_USERS" FromRole="CARTAG" ToRole="USERS" />
+        </EntityType>
+        <EntityType Name="LOGTABLE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="IPAddress" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ProcessID" Type="Int32" Nullable="false" />
+          <Property Name="ProcessType" Type="Int32" Nullable="false" />
+          <Property Name="ProcessCategoryType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProcessDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="PROCESSTYPE1" Relationship="Self.FK_LOGTABLE_PROCESSTYPE" FromRole="LOGTABLE" ToRole="PROCESSTYPE" />
+          <NavigationProperty Name="USER" Relationship="Self.FK_LOGTABLE_USERS" FromRole="LOGTABLE" ToRole="USERS" />
+        </EntityType>
+        <EntityType Name="MESSAGE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Subject" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Message1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="isRead" Type="Boolean" Nullable="false" />
+          <Property Name="ReadUserID" Type="Int32" />
+          <Property Name="isDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdateUserID" Type="Int32" />
+          <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+          <Property Name="AddDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="USER" Relationship="Self.FK_MESSAGES_USERS" FromRole="MESSAGES" ToRole="USERS" />
+        </EntityType>
+        <EntityType Name="PROCESSTYPE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProcessName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="LOGTABLEs" Relationship="Self.FK_LOGTABLE_PROCESSTYPE" FromRole="PROCESSTYPE" ToRole="LOGTABLE" />
+        </EntityType>
+        <EntityType Name="REVIEW">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CarID" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Stars" Type="Int32" Nullable="false" />
+          <Property Name="ReviewPost" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="isApproved" Type="Boolean" Nullable="false" />
+          <Property Name="ApproveUserID" Type="Int32" />
+          <Property Name="ApproveDate" Type="DateTime" Precision="3" />
+          <Property Name="AddDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="isDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdateUserID" Type="Int32" />
+          <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="CAR" Relationship="Self.FK_REVIEWS_CARS" FromRole="REVIEWS" ToRole="CARS" />
+          <NavigationProperty Name="USER" Relationship="Self.FK_REVIEWS_USERS" FromRole="REVIEWS" ToRole="USERS" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="USER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="isAdmin" Type="Boolean" Nullable="false" />
+          <Property Name="isDeleted" Type="Boolean" />
+          <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+          <Property Name="AddDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastUpdateUserID" Type="Int32" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="ADDRESSes" Relationship="Self.FK_ADDRESS_USERS" FromRole="USERS" ToRole="ADDRESS" />
+          <NavigationProperty Name="ADVERTISEMENTs" Relationship="Self.FK_ADVERTISEMENT_USERS" FromRole="USERS" ToRole="ADVERTISEMENT" />
+          <NavigationProperty Name="CARIMAGES" Relationship="Self.FK_CARIMAGES_USERS" FromRole="USERS" ToRole="CARIMAGES" />
+          <NavigationProperty Name="CARS" Relationship="Self.FK_CARS_USERS" FromRole="USERS" ToRole="CARS" />
+          <NavigationProperty Name="CARS1" Relationship="Self.FK_CARS_USERS1" FromRole="USERS" ToRole="CARS" />
+          <NavigationProperty Name="CARTAGs" Relationship="Self.FK_CARTAG_USERS" FromRole="USERS" ToRole="CARTAG" />
+          <NavigationProperty Name="LOGTABLEs" Relationship="Self.FK_LOGTABLE_USERS" FromRole="USERS" ToRole="LOGTABLE" />
+          <NavigationProperty Name="MESSAGES" Relationship="Self.FK_MESSAGES_USERS" FromRole="USERS" ToRole="MESSAGES" />
+          <NavigationProperty Name="REVIEWS" Relationship="Self.FK_REVIEWS_USERS" FromRole="USERS" ToRole="REVIEWS" />
+          <NavigationProperty Name="VIDEOS" Relationship="Self.FK_VIDEOS_USERS" FromRole="USERS" ToRole="VIDEOS" />
+        </EntityType>
+        <EntityType Name="VIDEO">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VideoPath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OriginalVideoPath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AddDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="AddUserID" Type="Int32" Nullable="false" />
+          <Property Name="isDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdateUserID" Type="Int32" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="USER" Relationship="Self.FK_VIDEOS_USERS" FromRole="VIDEOS" ToRole="USERS" />
+        </EntityType>
+        <Association Name="FK_ADDRESS_USERS">
+          <End Role="USERS" Type="Self.USER" Multiplicity="1" />
+          <End Role="ADDRESS" Type="Self.ADDRESS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ADDRESS">
+              <PropertyRef Name="LastUpdateUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ADVERTISEMENT_USERS">
+          <End Role="USERS" Type="Self.USER" Multiplicity="1" />
+          <End Role="ADVERTISEMENT" Type="Self.ADVERTISEMENT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ADVERTISEMENT">
+              <PropertyRef Name="LastUpdateUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARIMAGES_CARS">
+          <End Role="CARS" Type="Self.CAR" Multiplicity="1" />
+          <End Role="CARIMAGES" Type="Self.CARIMAGE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CARS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CARIMAGES">
+              <PropertyRef Name="CarID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARIMAGES_USERS">
+          <End Role="USERS" Type="Self.USER" Multiplicity="1" />
+          <End Role="CARIMAGES" Type="Self.CARIMAGE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CARIMAGES">
+              <PropertyRef Name="LastUpdateUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARS_USERS">
+          <End Role="USERS" Type="Self.USER" Multiplicity="1" />
+          <End Role="CARS" Type="Self.CAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CARS">
+              <PropertyRef Name="LastUpdateUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARS_USERS1">
+          <End Role="USERS" Type="Self.USER" Multiplicity="1" />
+          <End Role="CARS" Type="Self.CAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CARS">
+              <PropertyRef Name="LastUpdateUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARTAG_CARS">
+          <End Role="CARS" Type="Self.CAR" Multiplicity="1" />
+          <End Role="CARTAG" Type="Self.CARTAG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CARS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CARTAG">
+              <PropertyRef Name="CarID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REVIEWS_CARS">
+          <End Role="CARS" Type="Self.CAR" Multiplicity="1" />
+          <End Role="REVIEWS" Type="Self.REVIEW" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CARS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="REVIEWS">
+              <PropertyRef Name="CarID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARTAG_USERS">
+          <End Role="USERS" Type="Self.USER" Multiplicity="1" />
+          <End Role="CARTAG" Type="Self.CARTAG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CARTAG">
+              <PropertyRef Name="LastUpdateUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LOGTABLE_PROCESSTYPE">
+          <End Role="PROCESSTYPE" Type="Self.PROCESSTYPE" Multiplicity="1" />
+          <End Role="LOGTABLE" Type="Self.LOGTABLE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PROCESSTYPE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="LOGTABLE">
+              <PropertyRef Name="ProcessType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LOGTABLE_USERS">
+          <End Role="USERS" Type="Self.USER" Multiplicity="1" />
+          <End Role="LOGTABLE" Type="Self.LOGTABLE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="LOGTABLE">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MESSAGES_USERS">
+          <End Role="USERS" Type="Self.USER" Multiplicity="0..1" />
+          <End Role="MESSAGES" Type="Self.MESSAGE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MESSAGES">
+              <PropertyRef Name="LastUpdateUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REVIEWS_USERS">
+          <End Role="USERS" Type="Self.USER" Multiplicity="0..1" />
+          <End Role="REVIEWS" Type="Self.REVIEW" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="REVIEWS">
+              <PropertyRef Name="LastUpdateUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VIDEOS_USERS">
+          <End Role="USERS" Type="Self.USER" Multiplicity="1" />
+          <End Role="VIDEOS" Type="Self.VIDEO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VIDEOS">
+              <PropertyRef Name="LastUpdateUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AafnoSawariEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ADDRESSes" EntityType="Self.ADDRESS" />
+          <EntitySet Name="ADVERTISEMENTs" EntityType="Self.ADVERTISEMENT" />
+          <EntitySet Name="CARIMAGES" EntityType="Self.CARIMAGE" />
+          <EntitySet Name="CARS" EntityType="Self.CAR" />
+          <EntitySet Name="CARTAGs" EntityType="Self.CARTAG" />
+          <EntitySet Name="LOGTABLEs" EntityType="Self.LOGTABLE" />
+          <EntitySet Name="MESSAGES" EntityType="Self.MESSAGE" />
+          <EntitySet Name="PROCESSTYPEs" EntityType="Self.PROCESSTYPE" />
+          <EntitySet Name="REVIEWS" EntityType="Self.REVIEW" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="USERS" EntityType="Self.USER" />
+          <EntitySet Name="VIDEOS" EntityType="Self.VIDEO" />
+          <AssociationSet Name="FK_ADDRESS_USERS" Association="Self.FK_ADDRESS_USERS">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="ADDRESS" EntitySet="ADDRESSes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ADVERTISEMENT_USERS" Association="Self.FK_ADVERTISEMENT_USERS">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="ADVERTISEMENT" EntitySet="ADVERTISEMENTs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARIMAGES_CARS" Association="Self.FK_CARIMAGES_CARS">
+            <End Role="CARS" EntitySet="CARS" />
+            <End Role="CARIMAGES" EntitySet="CARIMAGES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARIMAGES_USERS" Association="Self.FK_CARIMAGES_USERS">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="CARIMAGES" EntitySet="CARIMAGES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARS_USERS" Association="Self.FK_CARS_USERS">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="CARS" EntitySet="CARS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARS_USERS1" Association="Self.FK_CARS_USERS1">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="CARS" EntitySet="CARS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARTAG_CARS" Association="Self.FK_CARTAG_CARS">
+            <End Role="CARS" EntitySet="CARS" />
+            <End Role="CARTAG" EntitySet="CARTAGs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REVIEWS_CARS" Association="Self.FK_REVIEWS_CARS">
+            <End Role="CARS" EntitySet="CARS" />
+            <End Role="REVIEWS" EntitySet="REVIEWS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARTAG_USERS" Association="Self.FK_CARTAG_USERS">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="CARTAG" EntitySet="CARTAGs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LOGTABLE_PROCESSTYPE" Association="Self.FK_LOGTABLE_PROCESSTYPE">
+            <End Role="PROCESSTYPE" EntitySet="PROCESSTYPEs" />
+            <End Role="LOGTABLE" EntitySet="LOGTABLEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LOGTABLE_USERS" Association="Self.FK_LOGTABLE_USERS">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="LOGTABLE" EntitySet="LOGTABLEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MESSAGES_USERS" Association="Self.FK_MESSAGES_USERS">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="MESSAGES" EntitySet="MESSAGES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REVIEWS_USERS" Association="Self.FK_REVIEWS_USERS">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="REVIEWS" EntitySet="REVIEWS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VIDEOS_USERS" Association="Self.FK_VIDEOS_USERS">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="VIDEOS" EntitySet="VIDEOS" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AafnoSawariModelStoreContainer" CdmEntityContainer="AafnoSawariEntities">
+          <EntitySetMapping Name="ADDRESSes">
+            <EntityTypeMapping TypeName="AafnoSawariModel.ADDRESS">
+              <MappingFragment StoreEntitySet="ADDRESS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Address1" ColumnName="Address" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="MapPathLarge" ColumnName="MapPathLarge" />
+                <ScalarProperty Name="MapPathSmall" ColumnName="MapPathSmall" />
+                <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+                <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+                <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+                <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+                <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ADVERTISEMENTs">
+            <EntityTypeMapping TypeName="AafnoSawariModel.ADVERTISEMENT">
+              <MappingFragment StoreEntitySet="ADVERTISEMENT">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="Size" ColumnName="Size" />
+                <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+                <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+                <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+                <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+                <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CARIMAGES">
+            <EntityTypeMapping TypeName="AafnoSawariModel.CARIMAGE">
+              <MappingFragment StoreEntitySet="CARIMAGES">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CarID" ColumnName="CarID" />
+                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+                <ScalarProperty Name="ImagePath1" ColumnName="ImagePath1" />
+                <ScalarProperty Name="ImagePath2" ColumnName="ImagePath2" />
+                <ScalarProperty Name="ImagePath3" ColumnName="ImagePath3" />
+                <ScalarProperty Name="ImagePath4" ColumnName="ImagePath4" />
+                <ScalarProperty Name="ImagePath5" ColumnName="ImagePath5" />
+                <ScalarProperty Name="ImagePath6" ColumnName="ImagePath6" />
+                <ScalarProperty Name="ImagePath7" ColumnName="ImagePath7" />
+                <ScalarProperty Name="ImagePath8" ColumnName="ImagePath8" />
+                <ScalarProperty Name="ImagePath9" ColumnName="ImagePath9" />
+                <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+                <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+                <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+                <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+                <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CARS">
+            <EntityTypeMapping TypeName="AafnoSawariModel.CAR">
+              <MappingFragment StoreEntitySet="CARS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="VIN" ColumnName="VIN" />
+                <ScalarProperty Name="Make" ColumnName="Make" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Body" ColumnName="Body" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Engine" ColumnName="Engine" />
+                <ScalarProperty Name="EngineType" ColumnName="EngineType" />
+                <ScalarProperty Name="Transmission" ColumnName="Transmission" />
+                <ScalarProperty Name="FuelType" ColumnName="FuelType" />
+                <ScalarProperty Name="FuelCapacity" ColumnName="FuelCapacity" />
+                <ScalarProperty Name="AutoDriving" ColumnName="AutoDriving" />
+                <ScalarProperty Name="AutoSteering" ColumnName="AutoSteering" />
+                <ScalarProperty Name="MaxSeating" ColumnName="MaxSeating" />
+                <ScalarProperty Name="DriveTrain" ColumnName="DriveTrain" />
+                <ScalarProperty Name="Doors" ColumnName="Doors" />
+                <ScalarProperty Name="FogLight" ColumnName="FogLight" />
+                <ScalarProperty Name="SunRoof" ColumnName="SunRoof" />
+                <ScalarProperty Name="TopSpeed" ColumnName="TopSpeed" />
+                <ScalarProperty Name="HorsePower" ColumnName="HorsePower" />
+                <ScalarProperty Name="Torque" ColumnName="Torque" />
+                <ScalarProperty Name="Bluetooth" ColumnName="Bluetooth" />
+                <ScalarProperty Name="Cruise" ColumnName="Cruise" />
+                <ScalarProperty Name="Keys" ColumnName="Keys" />
+                <ScalarProperty Name="StartType" ColumnName="StartType" />
+                <ScalarProperty Name="TouchScreenMonitor" ColumnName="TouchScreenMonitor" />
+                <ScalarProperty Name="USBPort" ColumnName="USBPort" />
+                <ScalarProperty Name="Seats" ColumnName="Seats" />
+                <ScalarProperty Name="PowerDriveSeats" ColumnName="PowerDriveSeats" />
+                <ScalarProperty Name="Security" ColumnName="Security" />
+                <ScalarProperty Name="HeatedSeat" ColumnName="HeatedSeat" />
+                <ScalarProperty Name="Turbo" ColumnName="Turbo" />
+                <ScalarProperty Name="CrashTestRating" ColumnName="CrashTestRating" />
+                <ScalarProperty Name="ColiisionDetection" ColumnName="ColiisionDetection" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="Brakes" ColumnName="Brakes" />
+                <ScalarProperty Name="length" ColumnName="length" />
+                <ScalarProperty Name="width" ColumnName="width" />
+                <ScalarProperty Name="height" ColumnName="height" />
+                <ScalarProperty Name="CargoCapacity" ColumnName="CargoCapacity" />
+                <ScalarProperty Name="Weigth" ColumnName="Weigth" />
+                <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+                <ScalarProperty Name="EngineWarranty" ColumnName="EngineWarranty" />
+                <ScalarProperty Name="TransmissionWarranty" ColumnName="TransmissionWarranty" />
+                <ScalarProperty Name="Suspension" ColumnName="Suspension" />
+                <ScalarProperty Name="AirBags" ColumnName="AirBags" />
+                <ScalarProperty Name="BackupCamera" ColumnName="BackupCamera" />
+                <ScalarProperty Name="LaneDetection" ColumnName="LaneDetection" />
+                <ScalarProperty Name="TowingCapacity" ColumnName="TowingCapacity" />
+                <ScalarProperty Name="Import" ColumnName="Import" />
+                <ScalarProperty Name="CountryOfOrigin" ColumnName="CountryOfOrigin" />
+                <ScalarProperty Name="Tires" ColumnName="Tires" />
+                <ScalarProperty Name="Rims" ColumnName="Rims" />
+                <ScalarProperty Name="ExtraFeatures" ColumnName="ExtraFeatures" />
+                <ScalarProperty Name="SeoLink" ColumnName="SeoLink" />
+                <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+                <ScalarProperty Name="AddUserID" ColumnName="AddUserID" />
+                <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+                <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+                <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+                <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+                <ScalarProperty Name="Slider" ColumnName="Slider" />
+                <ScalarProperty Name="Area1" ColumnName="Area1" />
+                <ScalarProperty Name="Area2" ColumnName="Area2" />
+                <ScalarProperty Name="Area3" ColumnName="Area3" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CARTAGs">
+            <EntityTypeMapping TypeName="AafnoSawariModel.CARTAG">
+              <MappingFragment StoreEntitySet="CARTAG">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CarID" ColumnName="CarID" />
+                <ScalarProperty Name="TagContent" ColumnName="TagContent" />
+                <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+                <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+                <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+                <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+                <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LOGTABLEs">
+            <EntityTypeMapping TypeName="AafnoSawariModel.LOGTABLE">
+              <MappingFragment StoreEntitySet="LOGTABLE">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="ProcessID" ColumnName="ProcessID" />
+                <ScalarProperty Name="ProcessType" ColumnName="ProcessType" />
+                <ScalarProperty Name="ProcessCategoryType" ColumnName="ProcessCategoryType" />
+                <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MESSAGES">
+            <EntityTypeMapping TypeName="AafnoSawariModel.MESSAGE">
+              <MappingFragment StoreEntitySet="MESSAGES">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="Message1" ColumnName="Message" />
+                <ScalarProperty Name="isRead" ColumnName="isRead" />
+                <ScalarProperty Name="ReadUserID" ColumnName="ReadUserID" />
+                <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+                <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+                <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+                <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+                <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PROCESSTYPEs">
+            <EntityTypeMapping TypeName="AafnoSawariModel.PROCESSTYPE">
+              <MappingFragment StoreEntitySet="PROCESSTYPE">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProcessName" ColumnName="ProcessName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="REVIEWS">
+            <EntityTypeMapping TypeName="AafnoSawariModel.REVIEW">
+              <MappingFragment StoreEntitySet="REVIEWS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CarID" ColumnName="CarID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Stars" ColumnName="Stars" />
+                <ScalarProperty Name="ReviewPost" ColumnName="ReviewPost" />
+                <ScalarProperty Name="isApproved" ColumnName="isApproved" />
+                <ScalarProperty Name="ApproveUserID" ColumnName="ApproveUserID" />
+                <ScalarProperty Name="ApproveDate" ColumnName="ApproveDate" />
+                <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+                <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+                <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+                <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+                <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="AafnoSawariModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USERS">
+            <EntityTypeMapping TypeName="AafnoSawariModel.USER">
+              <MappingFragment StoreEntitySet="USERS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+                <ScalarProperty Name="isAdmin" ColumnName="isAdmin" />
+                <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+                <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+                <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+                <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+                <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VIDEOS">
+            <EntityTypeMapping TypeName="AafnoSawariModel.VIDEO">
+              <MappingFragment StoreEntitySet="VIDEOS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="VideoPath" ColumnName="VideoPath" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="OriginalVideoPath" ColumnName="OriginalVideoPath" />
+                <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+                <ScalarProperty Name="AddUserID" ColumnName="AddUserID" />
+                <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+                <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+                <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+                <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

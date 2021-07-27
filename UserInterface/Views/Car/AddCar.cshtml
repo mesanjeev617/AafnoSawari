@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "AddCar";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<section class="content-header">
+    <h1>ADD CARS</h1>
+    <ol class="breadcrumb float-sm-left">
+        <li class="breadcrumb-item"><a>Admin</a></li>
+        <li class="breadcrumb-item"><a>Car</a></li>
+        <li class="breadcrumb-item active"><a>Add Car</a></li>
+    </ol>
+</section>
+<br />
+<div class="card-footer">
+    <button type="submit" class="btn btn-primary" href="/Admin/Car/CarList">Car List</button>
+</div>
+
+<section class="content">
+    <div class=" = row">
+        <div class="col-md-9">
+            @Html.Partial("~/Views/Shared/MessageForm.cshtml")
+            <script src="~/Areas/Admin/Content/JavaScript/ckeditor/ckeditor.js"></script>
+            <div class="box box-primary">
+                @using (Html.BeginForm("AddCar", "Car", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+                {
+                    @Html.Partial("Partial/CarForm")
+                }
+            </div>
+        </div>
+    </div>
+</section>
+

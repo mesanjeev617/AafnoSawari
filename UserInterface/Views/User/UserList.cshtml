@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "UserList";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+@model List<DTO.UserDTO>
+
+<section class="content-header">
+    <h1>User List</h1>
+    <ol class="breadcrumb float-sm-left">
+        <li class="breadcrumb-item"><a>Admin</a></li>
+        <li class="breadcrumb-item"><a>USER</a></li>
+        <li class="breadcrumb-item active"><a>USER List</a></li>
+    </ol>
+</section>
+<br />
+<div class="card-footer">
+    <button type="submit" class="btn btn-primary" href="/Admin/User/AddUser">Add User</button>
+</div>
+
+<div class="card">
+   
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>UserName</th>
+                    <th>Image</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+
+                </tr>
+            </thead>
+
+            @foreach (var item in Model)
+            {
+                <tbody>
+                    <tr id="a_@item.ID">
+                        <td>@item.FirstName</td>
+                        <td>@item.LastName</td>
+                        <td>@item.Username</td>
+                        <td>
+                            <img src="~/Areas/Admin/Content/UserImage/@item.ImagePath" width="60" height="40"/>
+                        </td>
+                        <td align="center" valign="middle">
+                            <a href="~/User/UpdateUser/@item.ID">
+                                <br />
+                                <img src="~/Areas/Admin/Content/Icon/Update.png" width="60" height="40" />
+                            </a>
+                        </td>
+                        <td align="center" valign="middle">
+                            <a href="#">
+                                <br />
+                                <img src="~/Areas/Admin/Content/Icon/delete.png" width="60" height="40"/>
+
+                            </a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            }
+
+            <tfoot>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>UserName</th>
+                    <th>Image</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <!-- /.card-body -->
+</div>
+<!-- /.card -->
